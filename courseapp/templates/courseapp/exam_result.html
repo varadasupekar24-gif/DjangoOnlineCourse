@@ -17,8 +17,8 @@
     {% for submission in submissions %}
         <div class="card mb-3">
             <div class="card-body">
-                <h5>{{ forloop.counter }}. {{ submission.question.question_text }}</h5>
-                <p>Your answer: {{ submission.selected_choice.choice_text }}</p>
+               <h5>{{ forloop.counter }}. {{ submission.question.content }}</h5>
+               <p>Your answer: {{ submission.selected_choice.content }}</p>
 
                 {% if submission.selected_choice.is_correct %}
                     <p class="text-success">Correct</p>
